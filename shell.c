@@ -62,6 +62,7 @@ int main()
 		fgets(buff, 80, stdin);
 		buff[strlen(buff) - 1] = '\0';
 		make_toks(buff, args);
+		
 		if (strcmp(args[0], "count") == 0)
 			count(args[2], args[1][0]);
 

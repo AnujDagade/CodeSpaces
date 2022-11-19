@@ -1,11 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
-void tok(char *str, char *tok[])
+void tok(char *str, char *toka[])
 {
     char *p;
+    char *to[10];
+    int pos =0 ;
     p = strtok(str, " ");
-    printf("%s", p);
+    
+
+
+
+    while(p != NULL) 
+    {
+        toka[pos] = p;
+        pos++;
+        p = strtok(NULL," ");
+
+    }
+    toka[pos] = NULL;
+
+  
+    //printf("%s", to);
+
 }
 
 
@@ -15,9 +32,13 @@ int main()
     char *arg[10];
 
     printf("Enter: ");
-    scanf("%s",&in);
-
+    fflush(stdin);
+    //canf("%s",&in);
+    fgets(in,80,stdin);
+    //in[strlen(in)-1] = '\0';
     tok(in, arg);
+
+    printf("%s", arg[1]);
 
     return 0;
 
