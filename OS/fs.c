@@ -1,9 +1,13 @@
 #include <stdio.h>
+
+int Total_Wait = 0,  Total_Turn = 0;
+
+
 void sort(int n);
 struct process
 {
     char pname[10];
-    int at, bt, et, st, tat, awt, wt, twt;
+    int at, bt, et, st, tat, wt;
 
 } p[10], temp;
 
@@ -28,22 +32,26 @@ void sort(int n)
 void waiting(int n)
 {
     int i;
+    printf("\n Waiting time of %s is %d",p[0].pname, p[0].wt);
     for (i = 1; i < n; i++)
     {
         p[i].st = p[i - 1].st + p[i - 1].bt;
         p[i].wt = p[i].st - p[i].at;
-        printf("\n abc %d", p[i].wt);
+        printf("\n Waiting time of %s is %d",p[i].pname, p[i].wt);
+        Total_Wait += p[i].wt;
     }
 }
 
-void turnaround()
+void turnaround(int n)
 {
-
+    int i;
+    printf("\n Turnaround time of %s is %d",p[0].pname, p[0].tat);
     for (i = 1; i < n; i++)
     {
         p[i].et = p[i - 1].et + p[i].bt;
         p[i].tat = p[i].et - p[i].at;
-        printf("\n abc %d", p[i].tat);
+        printf("\n Turnaround time of %s is %d",p[i].pname, p[i].tat);
+        Total_Turn += p[i].tat;
     }
 }
 
@@ -75,43 +83,20 @@ main()
 
     sort(n);
     p[0].st = 0;
-    p[0].et = 8;
-    // p[0].et=p[0].bt;
-    // p[0].wt=p[0].st-p[0].at;
-    // p[0].tat=p[0].et-p[0].at;
+    p[0].et = p[0].bt;
+    p[0].wt = 0;
+    p[0].tat = p[0].et-p[0].at;
+    Total_Turn += p[0].tat;
+    Total_Wait += p[0].wt;
 
-    // for(i=1;i<n;i++)
-    // {
-    //     p[i].st=p[i-1].et;
-    //     p[i].et=p[i-1].et+p[i].bt;
-    //     p[i].wt=p[i-1].st-p[i].at;
-    //     p[i].tat=p[i].et-p[i].at;
-    //     twt=twt+p[i].wt;
-    //     p[i].tat=p[i].et-p[i].at;
-    //     tat=tat+p[i].tat;
-    // }
-
-    // printf("\n pname \t at \t bt \t st \t et \t twt \t tat \n");
-    // for(i=0;i<n;i++)
-    // {
-    //     printf("\n");
-    //     printf("p%d\t %d\t %d\t %d\t %d\t %d\t %d",p[i].pname,p[i].at,p[i].bt,p[i].st,p[i].et,p[i].wt,p[i].tat);
-
-    // }
-
-    // printf("\n");
-    // printf("The Gantt Chart is:");
-    // printf("0_");
-    // for(i=0;i<n;i++)
-    // {
-    //     printf("p %d-%d",p[i].pname,p[i].et);
-    // }
-
-    // p[i].awt=twt/n;
-    // printf("\n Average wait time is:%d\t",p[i].awt);
-
-    // // p[i].tat=tat/n;
-    //  printf("\n Average turn around time is:%d\t",p[i].tat);
     waiting(n);
-    turnaround();
+    turnaround(n);
+
+
+    printf("\nTotal turn around time is %d", Total_Turn);
+    printf("\nTotal waiting time is %d", Total_Wait);
+
+    printf("\nAvg Turnaround: %.3f", (float)Total_Turn/n);
+    printf("\nAvg Waiting: %.3f", (float)Total_Wait/n);
+
 }
