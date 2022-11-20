@@ -28,14 +28,14 @@ void l_DIR(char *dir_name, char *op)
 
   
 
-        if (*op == 'n')
+        if (*op == 'f')
         {
             while ((dir = readdir(d)) != NULL)
             {
                 printf("%s\n", dir->d_name);
             }
         }
-        else if (strcmp(op, "-n") == 0)
+        else if (*op == 'n' )
         {
             while ((dir = readdir(d)) != NULL)
             {
@@ -43,7 +43,7 @@ void l_DIR(char *dir_name, char *op)
             }
             printf("No of entries: %d\n", count - 2);
         }
-        else if (*op == 'a')
+        else if (*op == 'i')
         {
             struct stat buf;
             while ((dir = readdir(d)) != NULL)

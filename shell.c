@@ -41,7 +41,7 @@ void count(char *fn, char op)
 	switch (op)
 	{
 	case 'c':
-		printf("No. of charecters:%d\n", cc - 1);
+		printf("No. of charecters:%d\n", cc );
 		break;
 	case 'w':
 		printf("No. of words:%d\n", wc);
@@ -49,6 +49,8 @@ void count(char *fn, char op)
 	case 'l':
 		printf("No. of lines:%d\n", lc + 1);
 		break;
+	default:
+		printf("Wrong command\n");
 	}
 }
 int main()
@@ -74,7 +76,7 @@ int main()
 			else
 			{
 				if (execvp(args[0], args) == -1)
-					printf("Bad command.\n");
+					printf("Wrong command.\n");
 			}
 		}
 	}
