@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "PROJECT_NAME"
+			"path" : "Schedulers"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +45,7 @@
 			]
 		}
 	],
-	"id" : "PROJECT_NAME::@6890427a1f51a3e7e1df",
+	"id" : "Schedulers::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -61,8 +61,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "PROJECT_NAME",
-	"nameOnDisk" : "PROJECT_NAME",
+	"name" : "Schedulers",
+	"nameOnDisk" : "Schedulers",
 	"paths" : 
 	{
 		"build" : ".",
