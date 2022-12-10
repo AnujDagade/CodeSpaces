@@ -4,16 +4,13 @@
 int main()
 {
 
-    processes proc[3];
+    
 
-    get_jobs(proc, 3);
-
-    printf("pname, ArrTime, BurstTime\n");
-    for(int i=0; i<3; i++)
-    {
-        printf("%s %d %d",proc[i]->pname, proc[i]->arrival_time, proc[i]->burst_time);
-    }
-
+    get_jobs(4);
+    boot();
+    waiting_time(4,true);
+    
+ 
 
     return 0;
 }
