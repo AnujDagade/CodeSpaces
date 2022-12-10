@@ -7,7 +7,7 @@
 
 <li>Regular Practicals</li>
 <li>Organize code</li>
-<li>Add support for build tools such as cmake</li>
+<li><s>Add support for build tools such as cmake</s></li>
 <li>Applications of algorithms in Operating System</li>
 
 </ol>
