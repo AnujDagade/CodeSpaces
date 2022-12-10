@@ -55,7 +55,7 @@ void turnaround(int n)
     }
 }
 
-main()
+int main()
 {
     int i, j, tat = 0, twt = 0, n;
     printf("enter the process no. of process:");

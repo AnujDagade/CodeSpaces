@@ -23,17 +23,21 @@ void get_jobs(int pnum)
 void boot()
 {
     proc[0].waiting_time = 0;
+    proc[0].start_time = 0;
 }
 
-void waiting_time(int pnum, bool display_time)
+int waiting_time(int pnum, bool display_time)
 {
     //Start time - arrival time
+    int total_waiting_time = 0;
 
     for(int i=1; i<pnum; i++)
     {
         //proc[i].start_time = proc[i-1].waiting_time+proc[i-1].burst_time;
-        proc[i].start_time = proc[i-1].waiting_time+proc[i-1].burst_time;
+        proc[i].start_time = proc[i-1].start_time+proc[i-1].burst_time;
         proc[i].waiting_time = proc[i].start_time-proc[i].arrival_time;
+
+        total_waiting_time += proc[i].waiting_time;
     }
 
     if(display_time)
@@ -44,4 +48,6 @@ void waiting_time(int pnum, bool display_time)
         }
     }
 
+    return total_waiting_time;
 }
+
