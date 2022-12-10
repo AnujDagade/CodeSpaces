@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspace/OS/build",
+  "command": "/usr/bin/gcc   -g   -o CMakeFiles/PROJECT_NAME.dir/fcfs.c.o   -c /workspace/OS/src/Schedulers/fcfs.c",
+  "file": "/workspace/OS/src/Schedulers/fcfs.c"
+}
+]

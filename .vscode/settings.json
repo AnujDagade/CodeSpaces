@@ -7,5 +7,6 @@
         "limits": "c",
         "sstream": "c",
         "streambuf": "c"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/src/Schedulers"
 }
