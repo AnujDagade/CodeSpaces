@@ -26,10 +26,10 @@ void boot()
     proc[0].start_time = 0;
 }
 
-int waiting_time(int pnum, bool display_time)
+float waiting_time(int pnum, bool display_time)
 {
     //Start time - arrival time
-    int total_waiting_time = 0;
+    float avg_wait_times, wait_times=0.0f;
 
     for(int i=1; i<pnum; i++)
     {
@@ -37,7 +37,7 @@ int waiting_time(int pnum, bool display_time)
         proc[i].start_time = proc[i-1].start_time+proc[i-1].burst_time;
         proc[i].waiting_time = proc[i].start_time-proc[i].arrival_time;
 
-        total_waiting_time += proc[i].waiting_time;
+        wait_times += proc[i].waiting_time;
     }
 
     if(display_time)
@@ -46,8 +46,10 @@ int waiting_time(int pnum, bool display_time)
         for (int i=0; i<pnum; i++) {
             printf("%s\t%d\n",proc[i].pname,proc[i].waiting_time);
         }
+        printf("Total waiting time is %fs\n",wait_times);
     }
+    avg_wait_times = wait_times/pnum;
 
-    return total_waiting_time;
+    return avg_wait_times;
 }
 
