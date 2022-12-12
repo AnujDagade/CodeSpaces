@@ -24,6 +24,7 @@ void boot()
 {
     proc[0].waiting_time = 0;
     proc[0].start_time = 0;
+    proc[0].end_time = proc[0].burst_time;
 }
 
 float waiting_time(int pnum, bool display_time)
@@ -53,3 +54,16 @@ float waiting_time(int pnum, bool display_time)
     return avg_wait_times;
 }
 
+
+float turnaround_time(int pnum)
+{
+    //Ending time - Arrival time
+
+    float total_turn_time =0.0f, avg_turn_time = 0.0f;
+
+    for(int i=1; i<pnum; i++)
+    {
+        proc[i].end_time = proc[i].start_time+proc[i].burst_time;
+        proc[i].turn_time = proc[i].end_time - proc[i].arrival_time;
+    }
+}
