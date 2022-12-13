@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/drcool/Programming/OS/build/CMakeFiles/3.25.0/CMakeSystem.cmake"
+			"path" : "build/CMakeFiles/3.25.0/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -275,7 +275,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/drcool/Programming/OS/build/CMakeFiles/3.25.0/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/3.25.0/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -519,7 +519,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/drcool/Programming/OS/build/CMakeFiles/3.25.0/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/3.25.0/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -658,7 +658,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/drcool/Programming/OS/build/CMakeFiles/3.25.0/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/3.25.0/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -757,14 +757,20 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "/home/drcool/Programming/OS/build/CMakeFiles/3.25.0/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/3.25.0/CMakeCXXCompiler.cmake"
+		},
+		{
+			"path" : "src/Schedulers/CMakeLists.txt"
+		},
+		{
+			"path" : "src/Schedulers/sjf/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
 		"build" : "/home/drcool/Programming/OS/build",
-		"source" : "/home/drcool/Programming/OS/src/Schedulers"
+		"source" : "/home/drcool/Programming/OS"
 	},
 	"version" : 
 	{

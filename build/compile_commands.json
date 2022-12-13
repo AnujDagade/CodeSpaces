@@ -1,7 +1,12 @@
 [
 {
   "directory": "/home/drcool/Programming/OS/build",
-  "command": "/usr/bin/clang -g -o CMakeFiles/Schedulers.dir/fcfs.c.o -c /home/drcool/Programming/OS/src/Schedulers/fcfs.c",
+  "command": "/usr/bin/clang -g -o src/Schedulers/CMakeFiles/Schedulers.dir/fcfs.c.o -c /home/drcool/Programming/OS/src/Schedulers/fcfs.c",
   "file": "/home/drcool/Programming/OS/src/Schedulers/fcfs.c"
+},
+{
+  "directory": "/home/drcool/Programming/OS/build",
+  "command": "/usr/bin/clang -g -o src/Schedulers/sjf/CMakeFiles/SJF.dir/sjf_np.c.o -c /home/drcool/Programming/OS/src/Schedulers/sjf/sjf_np.c",
+  "file": "/home/drcool/Programming/OS/src/Schedulers/sjf/sjf_np.c"
 }
 ]

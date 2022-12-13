@@ -1,3 +1,8 @@
-/home/drcool/Programming/OS/build/CMakeFiles/Schedulers.dir
 /home/drcool/Programming/OS/build/CMakeFiles/edit_cache.dir
 /home/drcool/Programming/OS/build/CMakeFiles/rebuild_cache.dir
+/home/drcool/Programming/OS/build/src/Schedulers/CMakeFiles/Schedulers.dir
+/home/drcool/Programming/OS/build/src/Schedulers/CMakeFiles/edit_cache.dir
+/home/drcool/Programming/OS/build/src/Schedulers/CMakeFiles/rebuild_cache.dir
+/home/drcool/Programming/OS/build/src/Schedulers/sjf/CMakeFiles/SJF.dir
+/home/drcool/Programming/OS/build/src/Schedulers/sjf/CMakeFiles/edit_cache.dir
+/home/drcool/Programming/OS/build/src/Schedulers/sjf/CMakeFiles/rebuild_cache.dir
