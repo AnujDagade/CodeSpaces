@@ -1,7 +1,7 @@
 [
 {
-  "directory": "/workspace/OS/build",
-  "command": "/usr/bin/clang   -g   -o CMakeFiles/Schedulers.dir/fcfs.c.o   -c /workspace/OS/src/Schedulers/fcfs.c",
-  "file": "/workspace/OS/src/Schedulers/fcfs.c"
+  "directory": "/home/drcool/Programming/OS/build",
+  "command": "/usr/bin/clang -g -o CMakeFiles/Schedulers.dir/fcfs.c.o -c /home/drcool/Programming/OS/src/Schedulers/fcfs.c",
+  "file": "/home/drcool/Programming/OS/src/Schedulers/fcfs.c"
 }
 ]
